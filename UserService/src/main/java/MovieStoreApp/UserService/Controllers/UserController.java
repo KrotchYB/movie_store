@@ -12,18 +12,14 @@ public class UserController {
 
     private UserService userService;
 
-    @GetMapping
-    public void createtest(){
-        this.userService.testmet();
-    }
     public UserController(UserService userService) {
         this.userService = userService;
     }
 
-//    @GetMapping
-//    public List<User> getAllUsers(){
-//        return userService.getAllUsers();
-//    }
+    @GetMapping
+    public List<User> getAllUsers(){
+        return userService.getAllUsers();
+    }
 
     @GetMapping("/{userId}")
     public User getOneUser(@PathVariable Long userId){

@@ -51,16 +51,4 @@ public class UserService {
     public void deleteOneUserById(Long userId) {
         userRepository.deleteById(userId);
     }
-
-    public void testmet() {
-        User foundUser = new User();
-        foundUser.setUserName("krotchy");
-        foundUser.setPassword("123456");
-        foundUser.setFirstName("burhan");
-        foundUser.setMiddleName("uno");
-        foundUser.setLastName("erden");
-        foundUser.setBirthDate(LocalDateTime.now());
-        foundUser.setGender(EnumLibrary.Gender.ATTACK_HELICOPTER);
-        userRepository.save(foundUser);
-    }
 }

@@ -28,8 +28,4 @@ public class User {
     @Column(name = "gender")
     EnumLibrary.Gender gender;
 
-
-
-
-
 }
